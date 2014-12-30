@@ -4,4 +4,6 @@ if [[ -d "$HOME/working/jdk/" ]]; then
   path[1,0]="$HOME/working/jdk/bin"
 elif [[ -r $java_home ]]; then
   export JAVA_HOME=`$java_home 2> /dev/null`
+  export STUDIO_JDK=$JAVA_HOME/../..
+  STUDIO_JDK=$STUDIO_JDK:A
 fi
